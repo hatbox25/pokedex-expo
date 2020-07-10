@@ -34,6 +34,7 @@ The following commands should generate qr expo to scan:
 ```bash
 yarn start
 ```
+
 then scan QR using your device to try this expo app
 
 ### Running Unit Test
@@ -46,4 +47,13 @@ yarn test:coverage => unit test coverage and create lcov report
 yarn test:view => unit test coverage and view lcov report
 ```
 
+### Generating Component using Blueprint
 
+Requirement: [redux-cli](https://www.npmjs.com/package/redux-cli)
+
+The following commands should run generating component:
+
+```bash
+redux g container <container name> // to create smart component
+redux g dumb <component name> // to create dumb component
+```

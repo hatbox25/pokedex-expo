@@ -1,0 +1,9 @@
+{
+  "sourceBase": "src",
+  "testBase": "src",
+  "duckPath": "Redux/Reducers",
+  "containerPath": "containers",
+  "dumbPath": "components",
+  "fileCasing": "pascal",
+  "storiesPath": "../stories"
+}
