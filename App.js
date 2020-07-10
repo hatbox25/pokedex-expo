@@ -1,22 +1,73 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, ScrollView, Button } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
+const Stack = createStackNavigator();
+
+function HomeScreen({ navigation }) {
+  return (
+    <ScrollView
+      contentContainerStyle={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "blue",
+      }}
+    >
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate("Detail")}
+      />
+    </ScrollView>
+  );
+}
+
+function DetailScreen() {
+  return (
+    <ScrollView
+      contentContainerStyle={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "red",
+      }}
+    >
+      <Text>Detail Screen</Text>
+    </ScrollView>
+  );
+}
 export default class App extends React.PureComponent {
   _testCall = () => {
-    console.log('abcd')
-  }
+    console.log("abcd");
+  };
 
   componentDidMount() {
-    this._testCall()
+    this._testCall();
   }
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <StatusBar style="auto" />
-      </View>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="List"
+            component={HomeScreen}
+            options={{
+              title: "Browse Pokedex",
+              headerStyle: {
+                backgroundColor: "rgb(24,26,31)",
+              },
+              headerTintColor: "#fff",
+              headerTitleStyle: {
+                fontWeight: "bold",
+              },
+            }}
+          />
+          <Stack.Screen name="Detail" component={DetailScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
     );
   }
 }
@@ -24,8 +75,8 @@ export default class App extends React.PureComponent {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "red",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
