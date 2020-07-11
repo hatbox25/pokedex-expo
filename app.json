@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "pokedex-expo",
+    "name": "Pokedex Expo",
     "slug": "pokedex-expo",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -21,6 +21,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "This project using React Native Expo by Mochamad Edwin Lokyta",
+    "githubUrl": "https://github.com/hatbox25/pokedex-expo"
   }
 }

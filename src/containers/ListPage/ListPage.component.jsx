@@ -56,7 +56,8 @@ class ListPage extends PureComponent {
   };
 
   _onClickPokemonItem = (url) => () => {
-    console.log(url.split("/")[6]);
+    const pokemonId = url.split("/")[6];
+    this.props.navigation.push("Detail", { pokemonId });
   };
 
   renderItem = ({ item: { name, url }, index }) => {
@@ -88,18 +89,18 @@ class ListPage extends PureComponent {
     );
   };
 
-  _onClickFilterItem = () => {
+  _onClickFilterItem = (type) => () => {
     this.setState({ selectedType: type.name }, () => {
       this.props.getPokemonByType(type.id);
       this.bottomSheetRef.current.snapTo(0); // to close bottom sheet
     });
   };
 
-  renderFilterOption = (type) => () => (
+  renderFilterOption = (type) => (
     <TouchableOpacity
       testID={`filter_type_${type.name}`}
       style={styles.buttonOption(this.state.selectedType === type.name)}
-      onPress={this._onClickFilterItem(type)}
+      onPressIn={this._onClickFilterItem(type)}
     >
       <Text>{type.name}</Text>
     </TouchableOpacity>
