@@ -1,82 +1,18 @@
 import React from "react";
-import { StyleSheet, Text, ScrollView, Button } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { Provider } from "react-redux";
+import store from "./src/redux/store";
+import NavigationProvider from "./src/navigation/NavigationProvider";
 
-const Stack = createStackNavigator();
+console.disableYellowBox = true;
 
-function HomeScreen({ navigation }) {
-  return (
-    <ScrollView
-      contentContainerStyle={{
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "blue",
-      }}
-    >
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate("Detail")}
-      />
-    </ScrollView>
-  );
-}
-
-function DetailScreen() {
-  return (
-    <ScrollView
-      contentContainerStyle={{
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "red",
-      }}
-    >
-      <Text>Detail Screen</Text>
-    </ScrollView>
-  );
-}
+// eslint-disable-next-line no-undef
+GLOBAL.XMLHttpRequest = GLOBAL.originalXMLHttpRequest || GLOBAL.XMLHttpRequest;
 export default class App extends React.PureComponent {
-  _testCall = () => {
-    console.log("abcd");
-  };
-
-  componentDidMount() {
-    this._testCall();
-  }
-
   render() {
     return (
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="List"
-            component={HomeScreen}
-            options={{
-              title: "Browse Pokedex",
-              headerStyle: {
-                backgroundColor: "rgb(24,26,31)",
-              },
-              headerTintColor: "#fff",
-              headerTitleStyle: {
-                fontWeight: "bold",
-              },
-            }}
-          />
-          <Stack.Screen name="Detail" component={DetailScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <Provider store={store}>
+        <NavigationProvider />
+      </Provider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "red",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
