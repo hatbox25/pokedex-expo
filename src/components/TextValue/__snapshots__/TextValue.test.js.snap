@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextValue Snap Test should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "paddingBottom": 16,
+      "width": "100%",
+    }
+  }
+>
+  <Text>
+    label
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontWeight": "600",
+      }
+    }
+  >
+    Value
+  </Text>
+</View>
+`;

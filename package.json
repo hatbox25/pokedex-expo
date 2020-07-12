@@ -6,9 +6,9 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest --silent",
-    "test:coverage": "jest --coverage --silent",
-    "test:view": "jest --coverage --silent && open coverage/lcov-report/index.html",
+    "test": "jest --config=jest.config.json",
+    "test:coverage": "jest --config=jest.config.json --coverage",
+    "test:view": "jest --config=jest.config.json --coverage && open coverage/lcov-report/index.html",
     "test:report": "./node_modules/.bin/codecov --token=97d3c9df-3605-4824-93e3-f44e46cf2c11"
   },
   "jest": {
@@ -40,14 +40,21 @@
   "devDependencies": {
     "@babel/core": "^7.8.6",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "24.9.0",
     "babel-preset-expo": "~8.1.0",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.14.0",
+    "enzyme-to-json": "3.4.2",
     "eslint": "^7.4.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.3",
-    "jest-expo": "^38.0.2",
-    "react-test-renderer": "^16.13.1",
+    "jest": "24.9.0",
+    "jest-canvas-mock": "2.2.0",
+    "jest-environment-jsdom-fourteen": "0.1.0",
+    "jest-resolve": "24.9.0",
+    "jest-watch-typeahead": "0.4.0",
     "redux-mock-store": "^1.5.4"
   },
   "private": true

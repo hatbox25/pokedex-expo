@@ -2,7 +2,7 @@ import { GET_LIST, SET_LIST, APPEND_LIST } from "../types";
 import pokedexAPIService from "../../services/api.service";
 import get from "lodash.get";
 
-export const onGetFailed = () => {
+export const onGetFailed = (dispatch) => {
   dispatch({ type: SET_LIST, payload: [] });
   return "error";
 };
@@ -21,10 +21,10 @@ export const getPokemonList = (params, isAppend = false) => async (
 
       resolve = result;
     } else {
-      resolve = onGetFailed();
+      resolve = onGetFailed(dispatch);
     }
   } catch (error) {
-    resolve = onGetFailed();
+    resolve = onGetFailed(dispatch);
   }
 
   return resolve;
@@ -43,12 +43,12 @@ export const getPokemonByType = (type) => async (dispatch) => {
         payload: pokemons.map((pokemon) => pokemon.pokemon),
       });
 
-      resolve = result;
+      resolve = response.data;
     } else {
-      resolve = onGetFailed();
+      resolve = onGetFailed(dispatch);
     }
   } catch (error) {
-    resolve = onGetFailed();
+    resolve = onGetFailed(dispatch);
   }
 
   return resolve;

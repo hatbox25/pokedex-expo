@@ -1,0 +1,337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailPage Snap Test should render correctly on finished get 1`] = `
+<ContextProvider
+  value={null}
+>
+  <DetailPage
+    getPokemon={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  />
+</ContextProvider>
+`;
+
+exports[`DetailPage Snap Test should render correctly on finished get 2`] = `
+<ScrollView
+  contentContainerStyle={
+    Object {
+      "alignItems": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgb(24,26,31)",
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+        "padding": 16,
+        "width": "100%",
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+        }
+      }
+      style={
+        Object {
+          "height": 120,
+          "width": 120,
+        }
+      }
+    />
+    <Image
+      source={
+        Object {
+          "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
+        }
+      }
+      style={
+        Object {
+          "height": 120,
+          "width": 120,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "padding": 16,
+        "paddingBottom": 0,
+        "width": "100%",
+      }
+    }
+  >
+    <TextValue
+      label="Base Experience"
+      value={64}
+    />
+    <TextValue
+      label="Height"
+      value={7}
+    />
+    <TextValue
+      label="Weight"
+      value={69}
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgb(24,26,31)",
+        "padding": 16,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgb(246,207,83)",
+          "fontWeight": "600",
+          "marginBottom": 16,
+        }
+      }
+    >
+      Types
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "rgb(234,234,234)",
+          "textAlign": "center",
+        }
+      }
+    >
+      grass
+      , poison
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "padding": 16,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgb(24,26,31)",
+          "fontWeight": "600",
+          "marginBottom": 16,
+        }
+      }
+    >
+      Stats
+    </Text>
+    <TextValue
+      key="hp"
+      label="Hp"
+      value={45}
+    />
+    <TextValue
+      key="attack"
+      label="Attack"
+      value={49}
+    />
+    <TextValue
+      key="defense"
+      label="Defense"
+      value={49}
+    />
+    <TextValue
+      key="special-attack"
+      label="Special-attack"
+      value={65}
+    />
+    <TextValue
+      key="special-defense"
+      label="Special-defense"
+      value={65}
+    />
+    <TextValue
+      key="speed"
+      label="Speed"
+      value={45}
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgb(24,26,31)",
+        "padding": 16,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgb(246,207,83)",
+          "fontWeight": "600",
+          "marginBottom": 16,
+        }
+      }
+    >
+      Abilities
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "rgb(234,234,234)",
+          "textAlign": "center",
+        }
+      }
+    >
+      overgrow
+      , chlorophyll
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgb(24,26,31)",
+        "padding": 16,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgb(246,207,83)",
+          "fontWeight": "600",
+          "marginBottom": 16,
+        }
+      }
+    >
+      Moves
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "rgb(234,234,234)",
+          "textAlign": "center",
+        }
+      }
+    >
+      razor-wind
+      , swords-dance
+      , cut
+      , bind
+      , vine-whip
+      , headbutt
+      , tackle
+      , body-slam
+      , take-down
+      , double-edge
+      , growl
+      , strength
+      , mega-drain
+      , leech-seed
+      , growth
+      , razor-leaf
+      , solar-beam
+      , poison-powder
+      , sleep-powder
+      , petal-dance
+      , string-shot
+      , toxic
+      , rage
+      , mimic
+      , double-team
+      , defense-curl
+      , light-screen
+      , reflect
+      , bide
+      , sludge
+      , skull-bash
+      , amnesia
+      , flash
+      , rest
+      , substitute
+      , snore
+      , curse
+      , protect
+      , sludge-bomb
+      , mud-slap
+      , giga-drain
+      , endure
+      , charm
+      , swagger
+      , fury-cutter
+      , attract
+      , sleep-talk
+      , return
+      , frustration
+      , safeguard
+      , sweet-scent
+      , synthesis
+      , hidden-power
+      , sunny-day
+      , rock-smash
+      , facade
+      , nature-power
+      , ingrain
+      , knock-off
+      , secret-power
+      , grass-whistle
+      , bullet-seed
+      , magical-leaf
+      , natural-gift
+      , worry-seed
+      , seed-bomb
+      , energy-ball
+      , leaf-storm
+      , power-whip
+      , captivate
+      , grass-knot
+      , venoshock
+      , round
+      , echoed-voice
+      , grass-pledge
+      , work-up
+      , grassy-terrain
+      , confide
+    </Text>
+  </View>
+</ScrollView>
+`;
+
+exports[`DetailPage Snap Test should render correctly on loading 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="rgb(246,207,83)"
+    hidesWhenStopped={true}
+    size="large"
+  />
+</View>
+`;

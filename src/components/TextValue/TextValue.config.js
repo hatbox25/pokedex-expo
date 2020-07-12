@@ -2,9 +2,12 @@ import PropTypes from "prop-types";
 
 const displayName = "TextValue";
 const propTypes = {
-  label: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  label: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
 };
-const defaultProps = {};
+const defaultProps = {
+  label: "label",
+  value: "Value",
+};
 
 export default { displayName, propTypes, defaultProps };

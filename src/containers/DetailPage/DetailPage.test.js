@@ -7,30 +7,48 @@ import DetailPageContainer from "./DetailPage.container";
 import DetailPage from "./DetailPage.component";
 import config from "./DetailPage.config";
 
+import { detailPokemon } from "../../constant/fictures";
+
 const mockStore = configureStore([thunk]);
 const initialState = {};
 const store = mockStore(initialState);
 
 const props = {
   ...config.defaultProps,
+  pokemon: {
+    data: detailPokemon,
+    loading: false,
+  },
+  route: {
+    params: {
+      pokemonId: "1",
+    },
+  },
+  getPokemon: jest.fn(() => Promise.resolve()),
 };
 
 let wrapper;
-let instance;
 beforeEach(() => {
   wrapper = shallow(<DetailPage {...props} />);
-  instance = wrapper.instance();
 });
 
 afterEach(() => {
   jest.clearAllMocks();
 });
 
-describe("DetailPage Unit Test", () => {});
-
 describe("DetailPage Snap Test", () => {
-  test("should render correctly", () => {
+  test("should render correctly on finished get", () => {
     expect(shallow(<DetailPageContainer store={store} />)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test("should render correctly on loading", () => {
+    wrapper.setProps({
+      pokemon: {
+        data: detailPokemon,
+        loading: true,
+      },
+    });
     expect(wrapper).toMatchSnapshot();
   });
 });

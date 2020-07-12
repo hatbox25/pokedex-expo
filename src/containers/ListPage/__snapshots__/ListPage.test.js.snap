@@ -1,0 +1,356 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListPage Snap Test should render bottom sheet content 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgb(24,26,31)",
+      "height": 68,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      focusedOpacity={0.7}
+      onPressIn={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgb(246,207,83)",
+          "borderColor": "rgb(234,234,234)",
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "color": "rgb(24,26,31)",
+          "flex": 1,
+          "justifyContent": "center",
+          "margin": 10,
+          "padding": 8,
+        }
+      }
+      testID="filter_type_Poison"
+    >
+      <Text>
+        Poison
+      </Text>
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      focusedOpacity={0.7}
+      onPressIn={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgb(246,207,83)",
+          "borderColor": "rgb(234,234,234)",
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "color": "rgb(24,26,31)",
+          "flex": 1,
+          "justifyContent": "center",
+          "margin": 10,
+          "padding": 8,
+        }
+      }
+      testID="filter_type_Ground"
+    >
+      <Text>
+        Ground
+      </Text>
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      focusedOpacity={0.7}
+      onPressIn={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgb(246,207,83)",
+          "borderColor": "rgb(234,234,234)",
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "color": "rgb(24,26,31)",
+          "flex": 1,
+          "justifyContent": "center",
+          "margin": 10,
+          "padding": 8,
+        }
+      }
+      testID="filter_type_Steel"
+    >
+      <Text>
+        Steel
+      </Text>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`ListPage Snap Test should render bottom sheet header 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgb(24,26,31)",
+      "borderTopLeftRadius": 16,
+      "borderTopRightRadius": 16,
+      "height": 32,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgb(246,207,83)",
+      }
+    }
+  >
+    Pull for Filter by Type
+  </Text>
+</View>
+`;
+
+exports[`ListPage Snap Test should render bottom sheet header when filter selected 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgb(24,26,31)",
+      "borderTopLeftRadius": 16,
+      "borderTopRightRadius": 16,
+      "height": 32,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgb(246,207,83)",
+      }
+    }
+  >
+    Selected type: Poison, pull to change
+  </Text>
+</View>
+`;
+
+exports[`ListPage Snap Test should render bottom sheet header when open 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgb(24,26,31)",
+      "borderTopLeftRadius": 16,
+      "borderTopRightRadius": 16,
+      "height": 32,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgb(246,207,83)",
+      }
+    }
+  >
+    Select Pokemon Type
+  </Text>
+</View>
+`;
+
+exports[`ListPage Snap Test should render correctly 1`] = `
+<ContextProvider
+  value={null}
+>
+  <ListPage
+    getPokemonByType={[Function]}
+    getPokemonList={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  />
+</ContextProvider>
+`;
+
+exports[`ListPage Snap Test should render correctly 2`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgb(234,234,234)",
+      "flex": 1,
+    }
+  }
+>
+  <FlatList
+    data={
+      Array [
+        Object {
+          "name": "bulbasaur",
+          "url": "https://pokeapi.co/api/v2/pokemon/1/",
+        },
+        Object {
+          "name": "ivysaur",
+          "url": "https://pokeapi.co/api/v2/pokemon/2/",
+        },
+        Object {
+          "name": "venusaur",
+          "url": "https://pokeapi.co/api/v2/pokemon/3/",
+        },
+        Object {
+          "name": "charmander",
+          "url": "https://pokeapi.co/api/v2/pokemon/4/",
+        },
+        Object {
+          "name": "charmeleon",
+          "url": "https://pokeapi.co/api/v2/pokemon/5/",
+        },
+        Object {
+          "name": "charizard",
+          "url": "https://pokeapi.co/api/v2/pokemon/6/",
+        },
+        Object {
+          "name": "squirtle",
+          "url": "https://pokeapi.co/api/v2/pokemon/7/",
+        },
+        Object {
+          "name": "wartortle",
+          "url": "https://pokeapi.co/api/v2/pokemon/8/",
+        },
+        Object {
+          "name": "blastoise",
+          "url": "https://pokeapi.co/api/v2/pokemon/9/",
+        },
+        Object {
+          "name": "caterpie",
+          "url": "https://pokeapi.co/api/v2/pokemon/10/",
+        },
+        Object {
+          "name": "metapod",
+          "url": "https://pokeapi.co/api/v2/pokemon/11/",
+        },
+        Object {
+          "name": "butterfree",
+          "url": "https://pokeapi.co/api/v2/pokemon/12/",
+        },
+        Object {
+          "name": "weedle",
+          "url": "https://pokeapi.co/api/v2/pokemon/13/",
+        },
+        Object {
+          "name": "kakuna",
+          "url": "https://pokeapi.co/api/v2/pokemon/14/",
+        },
+        Object {
+          "name": "beedrill",
+          "url": "https://pokeapi.co/api/v2/pokemon/15/",
+        },
+        Object {
+          "name": "pidgey",
+          "url": "https://pokeapi.co/api/v2/pokemon/16/",
+        },
+        Object {
+          "name": "pidgeotto",
+          "url": "https://pokeapi.co/api/v2/pokemon/17/",
+        },
+        Object {
+          "name": "pidgeot",
+          "url": "https://pokeapi.co/api/v2/pokemon/18/",
+        },
+        Object {
+          "name": "rattata",
+          "url": "https://pokeapi.co/api/v2/pokemon/19/",
+        },
+        Object {
+          "name": "raticate",
+          "url": "https://pokeapi.co/api/v2/pokemon/20/",
+        },
+      ]
+    }
+    disableVirtualization={true}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onEndReached={[Function]}
+    onEndReachedThreshold={0}
+    onRefresh={[Function]}
+    refreshing={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  />
+  <BottomSheet
+    enabledManualSnapping={true}
+    onCloseEnd={[Function]}
+    onOpenEnd={[Function]}
+    renderContent={[Function]}
+    renderHeader={[Function]}
+    snapPoints={
+      Array [
+        32,
+        100,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ListPage Snap Test should render item correctly 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  focusedOpacity={0.7}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "padding": 16,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgb(24,26,31)",
+      }
+    }
+  >
+    Bulbasaur
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "rgb(24,26,31)",
+      }
+    }
+  >
+    &gt;
+  </Text>
+</TouchableOpacity>
+`;

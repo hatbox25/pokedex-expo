@@ -69,6 +69,7 @@ class DetailPage extends PureComponent {
       <Text style={styles.statTitle}>Stats</Text>
       {get(data, "stats", []).map((stat) => (
         <TextValue
+          key={get(stat, "stat.name")}
           label={capitalizeWord(get(stat, "stat.name"))}
           value={get(stat, "base_stat")}
         />

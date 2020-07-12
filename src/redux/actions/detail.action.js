@@ -2,7 +2,7 @@ import { GET_DETAIL, SET_DETAIL } from "../types";
 import pokedexAPIService from "../../services/api.service";
 import get from "lodash.get";
 
-export const onGetFailed = () => {
+export const onGetFailed = (dispatch) => {
   dispatch({ type: SET_DETAIL, payload: {} });
   return "error";
 };
@@ -19,10 +19,10 @@ export const getPokemon = (id) => async (dispatch) => {
 
       resolve = result;
     } else {
-      resolve = onGetFailed();
+      resolve = onGetFailed(dispatch);
     }
   } catch (error) {
-    resolve = onGetFailed();
+    resolve = onGetFailed(dispatch);
   }
 
   return resolve;
